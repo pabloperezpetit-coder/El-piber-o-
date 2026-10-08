@@ -1011,3 +1011,13 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   max-width: 260px !important;
   max-height: 260px !important;
 }
+
+/* Evitar que las fotos se salgan de sus tarjetas al pasar el mouse */
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  transform: none;
+  transform-origin: center;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante:hover img,
+footer .footer-inferior .creditos-equipo .integrantes .integrante:focus-within img {
+  transform: none;
+}
