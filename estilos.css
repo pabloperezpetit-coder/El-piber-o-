@@ -901,3 +901,51 @@ footer a:hover {
   .footer-inferior .integrantes .integrante img,
   .footer-inferior .integrantes .integrante figcaption { transition: none; }
 }
+
+/* Mini carrusel horizontal de integrantes: dos tarjetas lado a lado */
+footer .footer-inferior .creditos-equipo .integrantes {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  flex-wrap: nowrap !important;
+  gap: 16px;
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 5px 6px 10px 3px;
+  scrollbar-width: thin;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante {
+  display: flex !important;
+  flex: 0 0 auto;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 112px;
+  margin: 0 !important;
+  padding: 10px 8px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(53,244,239,.25);
+  background: rgba(53,244,239,.035);
+  box-shadow: 3px 3px 0 rgba(241,46,141,.25);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante:hover {
+  border-color: var(--cyber-cyan, #35f4ef);
+  box-shadow: 4px 4px 0 rgba(241,46,141,.65), 0 0 12px rgba(53,244,239,.18);
+  transform: translateY(-2px);
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante figcaption {
+  font-size: 11px;
+  white-space: normal;
+  text-align: center;
+}
