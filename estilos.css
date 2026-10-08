@@ -858,6 +858,6 @@ footer a:hover {
 .creditos-equipo{display:flex;flex-direction:column;gap:14px}
 .integrantes{display:flex;align-items:flex-start;gap:30px}
 .integrante{display:flex;flex-direction:column;align-items:center;gap:9px;margin:0}
-.integrante img{width:42px;height:42px;max-width:42px;max-height:42px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #35f4ef;box-shadow:3px 3px 0 #f12e8d}
+.footer-inferior .integrantes .integrante img{width:28px;height:28px;min-width:28px;min-height:28px;max-width:28px;max-height:28px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #35f4ef;box-shadow:3px 3px 0 #f12e8d}
 .integrante figcaption{font-size:13px;line-height:1.35;text-align:center;color:#f5f2ff}
 .creditos-equipo>p{font-size:11px;color:#b4b5d1}
