@@ -964,3 +964,19 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   object-fit: cover !important;
   border-radius: 6px;
 }
+
+/* Retratos del equipo: tamaño cómodo y tarjetas equilibradas */
+footer .footer-inferior .creditos-equipo .integrantes .integrante {
+  width: 138px;
+  padding: 13px 12px;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  object-fit: cover !important;
+  border-radius: 8px;
+}
