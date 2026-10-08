@@ -949,3 +949,18 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante figcaption {
   white-space: normal;
   text-align: center;
 }
+
+/* Tamaño definitivo visible de las dos fotografías del equipo */
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  max-width: 48px !important;
+  max-height: 48px !important;
+  object-fit: cover !important;
+  border-radius: 6px;
+}
