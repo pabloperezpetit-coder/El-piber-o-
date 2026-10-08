@@ -861,3 +861,43 @@ footer a:hover {
 .footer-inferior .integrantes .integrante img{width:28px;height:28px;min-width:28px;min-height:28px;max-width:28px;max-height:28px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #35f4ef;box-shadow:3px 3px 0 #f12e8d}
 .integrante figcaption{font-size:13px;line-height:1.35;text-align:center;color:#f5f2ff}
 .creditos-equipo>p{font-size:11px;color:#b4b5d1}
+
+/* Footer / integrantes: micro-retratos cyberpunk interactivos */
+.footer-inferior .integrantes {
+  gap: 22px;
+}
+.footer-inferior .integrantes .integrante img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 1px solid var(--cyber-cyan, #35f4ef);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 var(--cyber-magenta, #f12e8d), 0 0 7px rgba(53,244,239,.25);
+  filter: saturate(.8) contrast(1.1);
+  transform: rotate(-3deg);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, border-color .25s ease;
+}
+.footer-inferior .integrantes .integrante:hover img,
+.footer-inferior .integrantes .integrante:focus-within img {
+  transform: rotate(0deg) translateY(-3px) scale(1.4);
+  border-color: var(--cyber-magenta, #f12e8d);
+  box-shadow: 3px 3px 0 var(--cyber-cyan, #35f4ef), 0 0 12px rgba(241,46,141,.6);
+  filter: saturate(1.2) contrast(1.1);
+}
+.footer-inferior .integrantes .integrante figcaption {
+  transition: color .25s ease, text-shadow .25s ease;
+}
+.footer-inferior .integrantes .integrante:hover figcaption {
+  color: var(--cyber-cyan, #35f4ef);
+  text-shadow: 1px 0 var(--cyber-magenta, #f12e8d);
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-inferior .integrantes .integrante img,
+  .footer-inferior .integrantes .integrante figcaption { transition: none; }
+}
