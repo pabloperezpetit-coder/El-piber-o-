@@ -980,3 +980,17 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   object-fit: cover !important;
   border-radius: 8px;
 }
+
+/* Equipo: fotografías más grandes y legibles */
+footer .footer-inferior .creditos-equipo .integrantes .integrante {
+  width: 198px;
+  padding: 16px;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  width: 160px !important;
+  height: 160px !important;
+  min-width: 160px !important;
+  min-height: 160px !important;
+  max-width: 160px !important;
+  max-height: 160px !important;
+}
