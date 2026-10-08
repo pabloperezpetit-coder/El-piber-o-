@@ -994,3 +994,20 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   max-width: 160px !important;
   max-height: 160px !important;
 }
+
+/* Equipo: retratos protagonistas, grandes y uno junto al otro */
+footer .footer-inferior .creditos-equipo .integrantes {
+  gap: 24px;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante {
+  width: 300px;
+  padding: 18px;
+}
+footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+  width: 260px !important;
+  height: 260px !important;
+  min-width: 260px !important;
+  min-height: 260px !important;
+  max-width: 260px !important;
+  max-height: 260px !important;
+}
