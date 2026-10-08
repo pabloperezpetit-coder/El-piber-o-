@@ -1021,3 +1021,104 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante:hover img,
 footer .footer-inferior .creditos-equipo .integrantes .integrante:focus-within img {
   transform: none;
 }
+
+/* =====================================================
+   RESPONSIVE: TABLET Y MÓVIL — mantiene diseño desktop
+===================================================== */
+@media (max-width: 1099px) {
+  body { min-width: 0; overflow-x: clip; }
+  .contenedor { width: min(100% - 48px, 960px); }
+  .seccion { padding: 76px 0; }
+  .cabecera { gap: 24px; }
+  .marca { width: 190px; flex-shrink: 0; }
+  nav ul { gap: 22px; }
+  .portada-interior { gap: 30px; min-height: 0; }
+  .portada-texto { width: 52%; min-width: 0; }
+  .portada h1 { font-size: clamp(60px, 8vw, 100px); }
+  .cuadro-portada { width: 42%; flex-shrink: 0; }
+  .cuadro-portada img { height: auto; aspect-ratio: 4 / 5; }
+  .leyenda-lateral { display: none; }
+  .introduccion { gap: 50px; }
+  .artista-interior, .obra-interior { gap: 40px; }
+  .retrato { width: 46%; }
+  .retrato img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  .canvas-figura { width: min(50%, 530px); min-width: 0; }
+  #canvas-obra { min-height: 0; width: 100%; }
+  #canvas-obra canvas { width: 100% !important; height: auto !important; aspect-ratio: 500 / 620; }
+  .contacto-interior { gap: 35px; }
+  form { width: 45%; flex-shrink: 0; }
+  .franja { gap: 30px; }
+  .footer-inferior { gap: 30px; }
+}
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .contenedor { width: calc(100% - 36px); }
+  .seccion { padding: 58px 0; }
+  h2 { font-size: clamp(36px, 10vw, 54px); letter-spacing: -1.5px; }
+  h3 { font-size: 26px; }
+  .cabecera { height: auto; min-height: 90px; padding: 16px 0; flex-direction: column; justify-content: center; gap: 14px; }
+  .marca { width: 180px; }
+  nav { width: 100%; }
+  nav ul { width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; }
+  nav a { display: inline-block; padding: 5px 0; }
+  .portada-interior { flex-direction: column; align-items: stretch; gap: 34px; padding: 55px 0 60px; }
+  .portada-texto { width: 100%; }
+  .portada h1 { font-size: clamp(54px, 13vw, 85px); letter-spacing: -3px; }
+  .bajada { font-size: 17px; }
+  .nota-portada { margin-top: 35px; }
+  .cuadro-portada { width: min(88%, 410px); align-self: center; transform: rotate(2deg); }
+  .cuadro-portada img { aspect-ratio: 4 / 5; }
+  .franja { height: auto; min-height: 56px; gap: 16px; padding: 12px 18px; flex-wrap: wrap; font-size: 10px; letter-spacing: 1.4px; }
+  .franja span:nth-child(even) { font-size: 17px; }
+  .introduccion, .artista-interior, .obra-interior, .contacto-interior { flex-direction: column; gap: 30px; align-items: stretch; }
+  .introduccion > div:first-child, .introduccion > div:last-child { width: 100%; }
+  .destacado { font-size: 25px; }
+  .servicios { flex-direction: column; margin-top: 35px; gap: 16px; }
+  .servicios article { width: 100%; }
+  .servicios p { max-width: none; }
+  .retrato { width: 100%; max-width: 490px; }
+  .retrato img { width: 100%; }
+  .artista h2 { font-size: clamp(37px, 10vw, 58px); }
+  .encabezado-seccion { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 28px; }
+  .galeria h2 { font-size: clamp(35px, 9vw, 50px); }
+  .obras { flex-direction: column; gap: 34px; }
+  .obras figure { width: 100%; }
+  .imagen-obra { height: auto; min-height: 260px; aspect-ratio: 4 / 3; }
+  .obra-interior { gap: 38px; }
+  .canvas-figura { width: 100%; max-width: 530px; align-self: center; }
+  #canvas-obra { padding: 10px; }
+  #canvas-obra canvas { max-width: 100%; }
+  .obra-texto h3 { font-size: clamp(29px, 8vw, 42px); }
+  .sello { font-size: 55px; }
+  .contacto h2 { font-size: clamp(38px, 10vw, 56px); }
+  form { width: 100%; padding-top: 0; }
+  .footer-superior { flex-wrap: wrap; gap: 18px; align-items: flex-start; }
+  .footer-superior .marca { width: 155px; }
+  .footer-inferior { flex-direction: column; align-items: flex-start; gap: 28px; }
+  footer .footer-inferior .creditos-equipo .integrantes { gap: 14px; width: 100%; overflow-x: auto; }
+  footer .footer-inferior .creditos-equipo .integrantes .integrante {
+    width: min(44vw, 210px);
+    padding: 10px;
+    flex: 0 0 auto;
+  }
+  footer .footer-inferior .creditos-equipo .integrantes .integrante img {
+    width: min(34vw, 175px) !important;
+    height: min(34vw, 175px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transform: none !important;
+  }
+  footer .footer-inferior .creditos-equipo .integrantes .integrante:hover img { transform: none !important; }
+  footer .footer-inferior .creditos-equipo .integrantes .integrante figcaption { overflow-wrap: anywhere; }
+}
+@media (max-width: 380px) {
+  .contenedor { width: calc(100% - 28px); }
+  nav ul { gap: 6px 12px; font-size: 12px; }
+  .portada h1 { font-size: 51px; }
+  .franja { gap: 10px; }
+  footer .footer-inferior .creditos-equipo .integrantes .integrante { width: 46vw; padding: 8px; }
+}
