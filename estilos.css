@@ -853,3 +853,11 @@ footer a:hover {
     animation: none;
   }
 }
+
+/* Créditos del equipo: retratos discretos en el footer */
+.creditos-equipo{display:flex;flex-direction:column;gap:14px}
+.integrantes{display:flex;align-items:flex-start;gap:30px}
+.integrante{display:flex;flex-direction:column;align-items:center;gap:9px;margin:0}
+.integrante img{width:90px;height:90px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #35f4ef;box-shadow:3px 3px 0 #f12e8d}
+.integrante figcaption{font-size:13px;line-height:1.35;text-align:center;color:#f5f2ff}
+.creditos-equipo>p{font-size:11px;color:#b4b5d1}
