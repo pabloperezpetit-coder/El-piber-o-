@@ -1,8 +1,5 @@
 
-/* ==========================================
-   EL PIBERÍO — CYBERPUNK GLOBAL
-   CSS completo con maquetación original
-========================================== */
+
 
 @import url('fuentes.css');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
@@ -28,8 +25,6 @@
   --cyber-texto: #c8c7df;
   --cyber-borde: rgba(53,244,239,.35);
 }
-
-/* RESET ORIGINAL */
 
 * {
   margin: 0;
@@ -95,8 +90,6 @@ textarea:focus-visible {
   background: var(--cyber-magenta);
   color: #fff;
 }
-
-/* ESTRUCTURA GENERAL */
 
 .contenedor {
   width: 1060px;
@@ -208,8 +201,6 @@ p + p {
   top: 10px;
 }
 
-/* HEADER */
-
 header {
   border-bottom: 1px solid var(--cyber-borde);
   background: rgba(9,10,24,.96);
@@ -255,8 +246,6 @@ nav a:hover {
   border-bottom: 1px solid var(--cyber-magenta);
   padding-bottom: 5px;
 }
-
-/* PORTADA */
 
 .portada {
   position: relative;
@@ -360,8 +349,6 @@ nav a:hover {
   color: #b5b6d2;
 }
 
-/* FRANJA */
-
 .franja {
   background: #171a32;
   color: var(--cyber-cyan);
@@ -379,8 +366,6 @@ nav a:hover {
 .franja span:nth-child(even) {
   font-size: 26px;
 }
-
-/* NOSOTROS */
 
 .introduccion {
   display: flex;
@@ -407,8 +392,6 @@ nav a:hover {
   margin-bottom: 24px;
   color: var(--cyber-texto);
 }
-
-/* TARJETAS DE SERVICIOS */
 
 .servicios {
   display: flex;
@@ -459,8 +442,6 @@ nav a:hover {
   font-size: 30px;
 }
 
-/* ARTISTA */
-
 .artista {
   background-color: #101326;
   background-image:
@@ -510,8 +491,6 @@ nav a:hover {
   font-size: 17px;
   color: var(--cyber-texto);
 }
-
-/* GALERÍA */
 
 .galeria {
   background: #090a18;
@@ -583,8 +562,6 @@ nav a:hover {
   letter-spacing: 1px;
   color: #aeb1d1;
 }
-
-/* INTERPRETACIÓN — EL GRITO */
 
 .interpretacion,
 #obra {
@@ -690,8 +667,6 @@ nav a:hover {
   line-height: 1.5;
 }
 
-/* CONTACTO */
-
 .contacto {
   background: #090a18;
 }
@@ -775,8 +750,6 @@ form .boton {
   color: var(--cyber-cyan);
 }
 
-/* FOOTER */
-
 footer {
   padding: 45px 0 30px;
   background: #070813;
@@ -822,8 +795,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ANIMACIÓN GLITCH */
-
 @keyframes piberio-glitch {
   0%, 90%, 100% {
     text-shadow:
@@ -854,7 +825,7 @@ footer a:hover {
   }
 }
 
-/* Créditos del equipo: retratos discretos en el footer */
+
 .creditos-equipo{display:flex;flex-direction:column;gap:14px}
 .integrantes{display:flex;align-items:flex-start;gap:30px}
 .integrante{display:flex;flex-direction:column;align-items:center;gap:9px;margin:0}
@@ -862,7 +833,7 @@ footer a:hover {
 .integrante figcaption{font-size:13px;line-height:1.35;text-align:center;color:#f5f2ff}
 .creditos-equipo>p{font-size:11px;color:#b4b5d1}
 
-/* Footer / integrantes: micro-retratos cyberpunk interactivos */
+
 .footer-inferior .integrantes {
   gap: 22px;
 }
@@ -902,7 +873,7 @@ footer a:hover {
   .footer-inferior .integrantes .integrante figcaption { transition: none; }
 }
 
-/* Mini carrusel horizontal de integrantes: dos tarjetas lado a lado */
+
 footer .footer-inferior .creditos-equipo .integrantes {
   display: flex !important;
   flex-direction: row !important;
@@ -950,7 +921,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante figcaption {
   text-align: center;
 }
 
-/* Tamaño definitivo visible de las dos fotografías del equipo */
+
 footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   display: block !important;
   visibility: visible !important;
@@ -965,7 +936,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   border-radius: 6px;
 }
 
-/* Retratos del equipo: tamaño cómodo y tarjetas equilibradas */
+
 footer .footer-inferior .creditos-equipo .integrantes .integrante {
   width: 138px;
   padding: 13px 12px;
@@ -981,7 +952,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   border-radius: 8px;
 }
 
-/* Equipo: fotografías más grandes y legibles */
+
 footer .footer-inferior .creditos-equipo .integrantes .integrante {
   width: 198px;
   padding: 16px;
@@ -995,7 +966,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   max-height: 160px !important;
 }
 
-/* Equipo: retratos protagonistas, grandes y uno junto al otro */
+
 footer .footer-inferior .creditos-equipo .integrantes {
   gap: 24px;
 }
@@ -1012,7 +983,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   max-height: 260px !important;
 }
 
-/* Evitar que las fotos se salgan de sus tarjetas al pasar el mouse */
+
 footer .footer-inferior .creditos-equipo .integrantes .integrante img {
   transform: none;
   transform-origin: center;
@@ -1022,9 +993,7 @@ footer .footer-inferior .creditos-equipo .integrantes .integrante:focus-within i
   transform: none;
 }
 
-/* =====================================================
-   RESPONSIVE: TABLET Y MÓVIL — mantiene diseño desktop
-===================================================== */
+
 @media (max-width: 1099px) {
   body { min-width: 0; overflow-x: clip; }
   .contenedor { width: min(100% - 48px, 960px); }
