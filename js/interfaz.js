@@ -1,4 +1,3 @@
-// Demostración local: valida los campos y comunica que no hay envío real.
 document.getElementById('formulario-contacto').addEventListener('submit', function (evento) {
   evento.preventDefault();
   document.getElementById('estado-formulario').textContent = '¡Gracias por compartir tu idea! Esta es una demostración: el mensaje no se envió.';
