@@ -1,0 +1,13 @@
+Carrera: Diseño Multimedial
+Materia: Diseño y Programación Web I
+Año: 2026
+Cuatrimestre: COMPLETAR ANTES DE ENTREGAR
+Comisión: DMT3AP
+Turno: Tarde
+Docente: Omar Toyos
+Carácter de entrega: Primer parcial
+Integrantes:
+- Costelaz, Gianella
+- Lanusse, Manuela
+- Pérez Petit, Pablo
+URL del sitio: https://pabloperezpetit-coder.github.io/El-piber-o-/
