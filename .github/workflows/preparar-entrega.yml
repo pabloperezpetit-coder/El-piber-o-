@@ -1,0 +1,38 @@
+name: Preparar entrega parcial
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  paquete:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Armar carpeta de entrega
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p entrega/landing/js entrega/landing/vendor
+          cp index.html estilos.css fuentes.css entrega/landing/
+          cp js/sketch.js js/interfaz.js entrega/landing/js/
+          cp vendor/p5.min.js entrega/landing/vendor/
+          find . -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.svg' \) -exec cp {} entrega/landing/ \;
+          curl --fail --location --retry 3 --output "entrega/landing/Manuela Lanusse.jpeg" "https://raw.githubusercontent.com/pabloperezpetit-coder/El-Grito---Parcial-1-Dise-o-y-programaci-n-web/main/Manuela%20Lanusse.jpeg"
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('entrega/landing/index.html')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('https://raw.githubusercontent.com/pabloperezpetit-coder/El-Grito---Parcial-1-Dise-o-y-programaci-n-web/main/Manuela%20Lanusse.jpeg', 'Manuela%20Lanusse.jpeg')
+          p.write_text(s, encoding='utf-8')
+          PY
+          cp datos.txt entrega/datos.txt
+          cd entrega
+          zip -qr ../costelaz_lanusse_perezpetit_parcial1_DMT3AP.zip landing datos.txt
+      - name: Descargar entrega lista
+        uses: actions/upload-artifact@v4
+        with:
+          name: costelaz_lanusse_perezpetit_parcial1_DMT3AP
+          path: costelaz_lanusse_perezpetit_parcial1_DMT3AP.zip
+          if-no-files-found: error
