@@ -28,11 +28,9 @@ jobs:
           p.write_text(s, encoding='utf-8')
           PY
           cp datos.txt entrega/datos.txt
-          cd entrega
-          zip -qr ../costelaz_lanusse_perezpetit_parcial1_DMT3AP.zip landing datos.txt
       - name: Descargar entrega lista
         uses: actions/upload-artifact@v4
         with:
           name: costelaz_lanusse_perezpetit_parcial1_DMT3AP
-          path: costelaz_lanusse_perezpetit_parcial1_DMT3AP.zip
+          path: entrega/
           if-no-files-found: error
