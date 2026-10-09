@@ -1,11 +1,5 @@
 
-/*
-  EL GRITO — GLITCH ART
-  Reinterpretación digital de Edvard Munch
-  El Piberío / p5.js
 
-  Estética: cyberpunk, fragmentación y error digital
-*/
 
 const W = 500;
 const H = 620;
@@ -36,7 +30,6 @@ function setup() {
   escena = createGraphics(W, H);
   escena.pixelDensity(1);
 
-  // Fragmentos digitales flotantes
   for (let i = 0; i < 65; i++) {
     fragmentos.push({
       x: random(W),
@@ -75,12 +68,10 @@ function draw() {
 
   energia = lerp(energia, objetivo, 0.08);
 
-  // Generamos la composición en un buffer
   dibujarEscena();
 
   background(COLOR.fondo);
 
-  // Desplazamiento RGB
   push();
   blendMode(ADD);
 
@@ -93,32 +84,23 @@ function draw() {
   pop();
   noTint();
 
-  // Imagen principal
   image(escena, 0, 0);
 
-  // Interferencias horizontales
   dibujarGlitch();
 
-  // Fragmentos flotantes
   dibujarFragmentos();
 
-  // Líneas de monitor
   dibujarScanlines();
 
-  // Marco digital
   dibujarInterfaz();
 }
 
-// ------------------------------------
-// COMPOSICIÓN GENERAL
-// ------------------------------------
 
 function dibujarEscena() {
   let g = escena;
 
   g.background(COLOR.fondo);
 
-  // CIELO: bandas digitales
   g.noStroke();
 
   for (let y = 0; y < 240; y += 12) {
@@ -135,7 +117,6 @@ function dibujarEscena() {
     g.rect(0, y, W, 12);
   }
 
-  // Ondas quebradas
   for (let i = 0; i < 13; i++) {
     let y = 15 + i * 17;
 
@@ -151,7 +132,6 @@ function dibujarEscena() {
       let onda =
         sin(x * 0.018 + i * 0.8 + tiempo) * 15;
 
-      // Saltos bruscos: estética glitch
       let salto =
         sin(x * 0.07 + i * 3) > 0.7 ? 12 : 0;
 
@@ -161,7 +141,6 @@ function dibujarEscena() {
     g.endShape();
   }
 
-  // PAISAJE ANGULAR
   g.noStroke();
   g.fill("#151E45");
 
@@ -175,7 +154,6 @@ function dibujarEscena() {
   g.vertex(0, 620);
   g.endShape(CLOSE);
 
-  // FIORDO DIGITAL
   g.fill("#102F47");
 
   g.beginShape();
@@ -185,7 +163,6 @@ function dibujarEscena() {
   g.vertex(320, 620);
   g.endShape(CLOSE);
 
-  // Reflejos fragmentados
   for (let i = 0; i < 55; i++) {
     let x = 250 + (i * 47) % 250;
     let y = 300 + (i * 29) % 300;
@@ -197,7 +174,6 @@ function dibujarEscena() {
     g.rect(x, y, 15 + (i % 5) * 7, 2);
   }
 
-  // PUENTE GEOMÉTRICO
   g.fill("#39234E");
 
   g.triangle(0, 210, 0, 620, 455, 620);
@@ -206,7 +182,6 @@ function dibujarEscena() {
 
   g.triangle(0, 290, 0, 620, 310, 620);
 
-  // Líneas de perspectiva
   g.stroke(COLOR.magenta);
   g.strokeWeight(2);
 
@@ -215,7 +190,6 @@ function dibujarEscena() {
   g.line(0, 390, 200, 620);
   g.line(0, 470, 100, 620);
 
-  // Baranda luminosa
   g.stroke("#170F2D");
   g.strokeWeight(17);
   g.line(-10, 245, 496, 587);
@@ -232,7 +206,6 @@ function dibujarEscena() {
   g.line(170, 370, 170, 510);
   g.line(460, 560, 460, 620);
 
-  // Personas del fondo
   g.noStroke();
   g.fill("#080D1B");
 
@@ -242,13 +215,9 @@ function dibujarEscena() {
   g.circle(45, 237, 18);
   g.circle(72, 252, 18);
 
-  // FIGURA CENTRAL
   dibujarFigura(g);
 }
 
-// ------------------------------------
-// FIGURA FRAGMENTADA
-// ------------------------------------
 
 function dibujarFigura(g) {
   g.push();
@@ -260,7 +229,6 @@ function dibujarFigura(g) {
 
   g.noStroke();
 
-  // Sombra cian desplazada
   g.fill(COLOR.cyan);
 
   g.beginShape();
@@ -270,7 +238,6 @@ function dibujarFigura(g) {
   g.vertex(210, 620);
   g.endShape(CLOSE);
 
-  // Cuerpo oscuro angular
   g.fill(COLOR.oscuro);
 
   g.beginShape();
@@ -280,46 +247,37 @@ function dibujarFigura(g) {
   g.vertex(185, 620);
   g.endShape(CLOSE);
 
-  // Fragmentos de la ropa
   g.fill("#35236A");
 
   g.triangle(250, 480, 290, 500, 230, 620);
   g.triangle(300, 480, 330, 620, 270, 610);
 
-  // Cuello
   g.fill(COLOR.piel);
   g.rect(253, 410, 42, 90);
 
-  // Contorno magenta de la cabeza
   g.fill(COLOR.magenta);
   g.ellipse(279, 370, 125, 162);
 
-  // Rostro
   g.fill(COLOR.piel);
   g.ellipse(271, 367, 112, 150);
 
-  // Cortes geométricos del rostro
   g.fill("#C69CA9");
 
   g.triangle(220, 350, 255, 315, 245, 410);
   g.triangle(320, 355, 295, 315, 300, 425);
 
-  // Ojos
   g.fill(COLOR.oscuro);
 
   g.rect(244, 346, 15, 20, 3);
   g.rect(288, 346, 15, 20, 3);
 
-  // Brillos cian
   g.fill(COLOR.cyan);
   g.rect(248, 349, 5, 5);
   g.rect(292, 349, 5, 5);
 
-  // Nariz
   g.fill("#AA8495");
   g.triangle(273, 365, 262, 389, 283, 389);
 
-  // Boca: grito digital
   let apertura =
     42 + sin(tiempo * 5) * energia * 8;
 
@@ -331,7 +289,6 @@ function dibujarFigura(g) {
   g.strokeWeight(2);
   g.ellipse(274, 415, 35, apertura + 10);
 
-  // Brazos angulares
   g.stroke(COLOR.oscuro);
   g.strokeWeight(25);
 
@@ -341,7 +298,6 @@ function dibujarFigura(g) {
   g.line(325, 385, 333, 445);
   g.line(333, 445, 350, 510);
 
-  // Manos
   g.stroke(COLOR.piel);
   g.strokeWeight(18);
 
@@ -351,12 +307,8 @@ function dibujarFigura(g) {
   g.pop();
 }
 
-// ------------------------------------
-// INTERFERENCIAS GLITCH
-// ------------------------------------
 
 function dibujarGlitch() {
-  // Desplazamos tiras horizontales del buffer
   let cantidad = floor(energia * 15);
 
   for (let i = 0; i < cantidad; i++) {
@@ -374,9 +326,6 @@ function dibujarGlitch() {
   }
 }
 
-// ------------------------------------
-// FRAGMENTOS DIGITALES
-// ------------------------------------
 
 function dibujarFragmentos() {
   noStroke();
@@ -397,9 +346,6 @@ function dibujarFragmentos() {
   }
 }
 
-// ------------------------------------
-// LÍNEAS DE MONITOR
-// ------------------------------------
 
 function dibujarScanlines() {
   stroke(0, 0, 0, 45);
@@ -410,16 +356,12 @@ function dibujarScanlines() {
   }
 }
 
-// ------------------------------------
-// INTERFAZ EXPERIMENTAL
-// ------------------------------------
 
 function dibujarInterfaz() {
   noFill();
   stroke(COLOR.cyan);
   strokeWeight(1);
 
-  // Esquinas de interfaz
   line(15, 15, 55, 15);
   line(15, 15, 15, 55);
 
